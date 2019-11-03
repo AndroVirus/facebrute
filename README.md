@@ -18,7 +18,7 @@ sudo bash install.sh</code></pre>
 <pre><code>apt-get update -y && apt-get install python3 python3-pip -y 
 pip3 install requests bs4 tor re2 random2 stem</code></pre>
 <h2> Usage</h2>
-<pre><code>git clone https://github.com/graysuit/facebrute
+<pre><code>git clone https://github.com/graysuit/facebrute.git
 cd facebrute
 chmod +x fb.py
 service tor start
