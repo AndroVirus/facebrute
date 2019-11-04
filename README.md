@@ -22,6 +22,7 @@ cd facebrute
 chmod +x fb.py
 service tor start
 sudo python3 fb.py</code></pre>
+<center><img width=800px height=500px src="https://i.ibb.co/QmhQ3cv/response-txt.png"></center>
 <h2> Legal Disclaimer</h2>
 <p>Bruteforcing is going to never harm anyone nor it benefits script kiddies. Instead, they expose the website's mistakes and give developers a golden opportunity to make websites more secure. What if we use this knowledge secretly? Why we public this knowledge?</p>
 <p>We publicized this knowledge to make developers acknowledged of their vulnerabilities + to make new programmers more clever.?</p>
