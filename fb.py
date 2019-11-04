@@ -1,4 +1,4 @@
-import requests,re,os,random,lxml,socks,socket,time
+import requests,re,os,random,lxml,time
 from stem import Signal
 from stem.control import Controller
 from bs4 import BeautifulSoup
