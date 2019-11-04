@@ -1,5 +1,5 @@
 <h1> Facebrute</h1>
-<p>Facebrute is an advance facebook brute force script made in python language. Just provide username & wordlist and this script is going to try all passwords with returning responses as well. It uses python-requests with tor stem controller that changes its Public IP on every attempt as facebook block IP that try 20 attempts at once. <b>Make sure to use <a href="https://github.com/graysuit/wGen">Wgen</a> for effective wordlist generation.</b></p>
+<p>Facebrute is an advance facebook bruteforce script made in python language. Just provide username & wordlist and this script is going to try all passwords with returning responses as well. It uses python-requests with tor stem controller that changes its Public IP on every attempt as facebook block IP that try 20 attempts at once. <b>Make sure to use <a href="https://github.com/graysuit/wGen">Wgen</a> for effective wordlist generation.</b></p>
 <h2> Features</h2>
 <p><ul><li> Anonymous bruteforce through TOR</li>
 <li> Display public IP while bruteforce</li>
