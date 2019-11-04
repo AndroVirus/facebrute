@@ -8,7 +8,7 @@
 <li> Display first 10 characters of response and save complete response in response.txt</li>
 <li> Changes user-agent on every attempt</li>
 <li> Compitable for every linux.(Tested on kali 32 bit)</li></ul></p>
-<center><img width=800px height=500px src="https://i.ibb.co/Rj7YpB4/creacked.png"><img width=800px height=500px src="https://i.ibb.co/1TywXCM/detect-ip.png"></center>
+<center><img width=800px height=500px src="https://i.ibb.co/3Rk4yMY/creacked.png"><img width=800px height=500px src="https://i.ibb.co/9WKC4xh/detect-ip.png"></center>
 <h2> Requirements</h2>
 <h3> Install using script</h3>
 <pre><code>chmod +x install.sh
