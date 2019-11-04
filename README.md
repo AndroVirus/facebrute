@@ -1,5 +1,5 @@
 <h1> Facebrute</h1>
-<p>Facebrute is an advance facebook brute force script made in python language. Just provide username & wordlist and this script is going to try all passwords with returning responses as well. It uses python-requests with tor stem controller that changes its Public IP on every attempt as facebook block IP that try 20 attempts at once.</p>
+<p>Facebrute is an advance facebook brute force script made in python language. Just provide username & wordlist and this script is going to try all passwords with returning responses as well. It uses python-requests with tor stem controller that changes its Public IP on every attempt as facebook block IP that try 20 attempts at once. <b>Make sure to use <a href="https://github.com/graysuit/wGen">Wgen</a> for effective wordlist generation.</b></p>
 <h2> Features</h2>
 <p><ul><li> Anonymous bruteforce through TOR</li>
 <li> Display public IP while bruteforce</li>
@@ -7,6 +7,7 @@
 <li> Passwords that were used while IP was blocked will be save in left_password.txt</li>
 <li> Display first 10 characters of response and save complete response in response.txt</li>
 <li> Changes user-agent on every attempt</li>
+<li> Removes duplicate words and words under 6 digits from wordlist</li>
 <li> Compitable for every linux.(Tested on kali 32 bit)</li></ul></p>
 <center><img width=800px height=500px src="https://i.ibb.co/3Rk4yMY/creacked.png"><img width=800px height=500px src="https://i.ibb.co/9WKC4xh/detect-ip.png"></center>
 <h2> Requirements</h2>
@@ -14,8 +15,8 @@
 <pre><code>chmod +x install.sh
 sudo bash install.sh</code></pre>
 <h3> Install using terminal</h3>
-<pre><code>apt-get update -y && apt-get install python3 python3-pip -y 
-pip3 install requests bs4 tor re2 random2 stem</code></pre>
+<pre><code>sudo apt-get update -y && sudo apt-get install python3 python3-pip -y 
+sudo pip3 install requests bs4 tor re2 random2 stem</code></pre>
 <h2> Usage</h2>
 <pre><code>git clone https://github.com/graysuit/facebrute.git
 cd facebrute
